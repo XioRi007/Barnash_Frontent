@@ -20,7 +20,6 @@ module.exports = {
   output: {
     path: path.resolve('dist'),
     filename: '[name].js',
-   // assetModuleFilename: './assets/images/[hash][ext][query]'
   },
   devServer: {
     client: {
@@ -36,9 +35,7 @@ module.exports = {
   WriteFilePlugin(),
   new CopyPlugin({
     patterns: [     
-      { from: 'src/pages/assets/images', to: 'assets/images' },
-   
-      
+      { from: 'src/pages/assets/images', to: 'assets/images' },         
     ],
   }),
     new CleanWebpackPlugin(),    
