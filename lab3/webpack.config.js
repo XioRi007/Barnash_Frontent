@@ -41,9 +41,7 @@ module.exports = {
       
     ],
   }),
-    new CleanWebpackPlugin({
-      cleanStaleWebpackAssets: false,
-  }),    
+    new CleanWebpackPlugin(),    
 
     ]
   
