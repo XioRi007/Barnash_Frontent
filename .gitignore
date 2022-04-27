@@ -1,2 +1,4 @@
 *.docx
+*.pdf
+dist
 node_modules
