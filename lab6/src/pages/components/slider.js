@@ -3,7 +3,8 @@ export default class Slider{
     constructor(containerClass, images = [], numberOfVisible, speed=0.5){
         this.speed = speed;
         this.container = document.querySelectorAll(`.${containerClass}`)[0];
-        this.container.style.width = `${numberOfVisible*320}px`;        
+        this.container.style.width = `${numberOfVisible*320}px`;   
+        this.numberOfVisible = numberOfVisible;
         this.imgList = images.map((e, i)=>{
             return `<img class="slider__img" src=${e}>`;
         });             
@@ -23,9 +24,11 @@ export default class Slider{
         const list = document.querySelectorAll('.slider__list')[0];
         list.style.transition = `all ${this.speed}s`;
         const num = this.imgList.length;
+        const numberOfVisible = this.numberOfVisible;
+        console.log(numberOfVisible);
         let c = 0;
         nextBtn.addEventListener('click', ()=>{
-            if(list.style.transform !== `translateX(-${(num-2)*323}px)`){        
+            if(list.style.transform !== `translateX(-${(num-numberOfVisible)*323}px)`){        
                 c-=323;
                 list.style.transform = `translateX(${c}px)`;
             }
