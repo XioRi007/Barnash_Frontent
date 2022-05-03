@@ -1,0 +1,52 @@
+@import './standart.scss';
+.slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    
+    
+    &__header{
+        @extend .header-standart;
+    }
+    &__content{ 
+        margin: 13rem 2rem; 
+        position: relative;     
+        overflow: hidden; 
+    }
+    &__list{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 9999px;
+        
+        transition: all 0.5s;
+        transform: translateX(0px);
+        
+    }
+    &__img{
+        height: 260px;
+        width: 300px;  
+        padding: 10px; 
+    }
+}
+
+.arrow{
+    position: absolute;
+    font-size: 5rem;
+    color: red;
+    opacity: 0.8;
+    transition: all 0.2s;
+    z-index: 100;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+        font-size: 5.1rem;
+    }
+    &-right{
+        top: 32%;
+        right: -1%;
+    }
+    &-left{
+        top: 32%;
+        right: 97%;        
+    }
+}

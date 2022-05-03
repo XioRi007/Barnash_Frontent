@@ -1,0 +1,13 @@
+.header-standart{
+
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+}
+.text-standart{
+
+    font-size: 1.5rem;
+        &::first-letter{
+            padding-left: 2rem;
+        }
+}
